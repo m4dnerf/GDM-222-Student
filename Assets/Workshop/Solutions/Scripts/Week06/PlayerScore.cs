@@ -1,5 +1,6 @@
 namespace Solution
 {
+    [System.Serializable]
     public class PlayerScore
     {
         public string playerName;

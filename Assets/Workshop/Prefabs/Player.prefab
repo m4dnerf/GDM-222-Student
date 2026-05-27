@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4314285243807817638}
   - component: {fileID: 5267956022897430819}
+  - component: {fileID: 4797298444288185497}
   - component: {fileID: 5615206909734415387}
   - component: {fileID: 7472937247535290411}
   m_Layer: 0
@@ -92,6 +93,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4797298444288185497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2975489352503432100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f0de7b69c52914aa90618ed0772ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Solution.ActionHistoryManager
 --- !u!114 &5615206909734415387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f68d9ca032a9a5428e03e27b1c0b9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Boy
+  Name: THE_MODIFIED
   positionX: 0
   positionY: 0
   mapGenerator: {fileID: 0}
@@ -118,6 +131,8 @@ MonoBehaviour:
   inventory: {fileID: 7472937247535290411}
   Gold: 0
   KeyItemFireStorm: {fileID: 11400000, guid: 2f6215b804ab4c9439602ad05553744d, type: 2}
+  actionHistoryManager: {fileID: 0}
+  isAutoMoving: 0
 --- !u!114 &7472937247535290411
 MonoBehaviour:
   m_ObjectHideFlags: 0

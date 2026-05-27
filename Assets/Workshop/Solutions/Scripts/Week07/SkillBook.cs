@@ -14,30 +14,30 @@ using UnityEngine;
         Skill fireWave;
         Skill fireExplosion;
 
-        public void Start()
+    public void Start()
         {
             // สร้างสกิล
             attack = new Skill("Attack");
             attack.isAvailable = true;
-            fireStorm = new Skill("FireStorm");
-            fireBall = new Skill("FireBall");
-            fireBlast = new Skill("FireBlast");
-            fireWave = new Skill("FireWave");
+            fireStorm = new Skill("Thunderburst");
+            fireBall = new Skill("Overkill");
+            fireBlast = new Skill("FireBurst");
+            fireWave = new Skill("FirePlasma");
             fireExplosion = new Skill("FireExplosion");
-        
-            // build skill tree
-            // └── Attack
-            //     └── FireStorm
-            //         ├── FireBlast
-            //         └── FireBall
-            //             └── FireWave
-            //                 └── FireExplosion
+       
+        // build skill tree
+        // └── Attack
+        //     └── FireStorm
+        //         ├── FireBlast
+        //         └── FireBall
+        //             └── FireWave
+        //                 └── FireExplosion
 
 
-            // 1. set the nextSkills for each skill
+        // 1. set the nextSkills for each skill
 
-            // [0] Attack -> FireStorm
-            attack.nextSkills.Add(fireStorm);
+        // [0] Attack -> FireStorm
+        attack.nextSkills.Add(fireStorm);
             // [1] FireStorm -> FireBlast
             fireStorm.nextSkills.Add(fireBlast);
             // [2] FireStorm -> FireBall
@@ -46,6 +46,7 @@ using UnityEngine;
             fireBall.nextSkills.Add(fireWave);
             // [4] FireWave -> FireExplosion
             fireWave.nextSkills.Add(fireExplosion);
+       
 
             this.attackSkillTree = new SkillTree(attack);
         }

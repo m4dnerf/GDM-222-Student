@@ -20,7 +20,14 @@ namespace Solution
                     player.inventory.UseItem(keyToExit, requiredKeyAmount);
                     player.UpdatePosition(this.positionX, this.positionY);
                     mapGenerator.playerScript.enabled = false;
+                    int scorereceived = CalculateScore(player);
+                    
+                    string playerName = player.Name;
+                    PlayerScore data = new PlayerScore(playerName, scorereceived);
+                    leaderboard.RecordScore(new PlayerScore(playerName,scorereceived)); 
 
+                    leaderboard.ShowleaderBoard();
+                    JsonSafeModeSystem.SaveGame(data);
                     Debug.Log("You win");
                 }
             }
